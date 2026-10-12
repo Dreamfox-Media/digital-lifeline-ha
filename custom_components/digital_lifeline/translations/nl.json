@@ -1,0 +1,59 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Digital Lifeline",
+        "description": "Zet eerst de Home Assistant-app aan in het Digital Lifeline-portaal en plak daarna de webhook-URL en het token die daar staan.",
+        "data": { "url": "Webhook-URL", "token": "Token" }
+      },
+      "reauth_confirm": {
+        "title": "Token bijwerken",
+        "description": "Het portaal weigerde het token. Plak het huidige token uit het portaal.",
+        "data": { "token": "Token" }
+      }
+    },
+    "error": {
+      "invalid_url": "Dit is geen geldige webhook-URL (hij moet ?household=... bevatten).",
+      "invalid_auth": "Het portaal weigerde het token.",
+      "integration_disabled": "De Home Assistant-app staat uit in het portaal. Zet hem eerst aan.",
+      "cannot_connect": "Het portaal is niet bereikbaar.",
+      "unknown": "Onverwachte fout."
+    },
+    "abort": {
+      "already_configured": "Dit huishouden is al ingesteld.",
+      "reauth_successful": "Token bijgewerkt."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Kritieke sensoren",
+        "description": "Kies welke entiteiten direct een melding geven. Standaard automatisch gedetecteerd.",
+        "data": {
+          "val_detectie": "Valdetectie",
+          "noodknop": "Waarschuwings-/paniekknop",
+          "rookmelder": "Rook-/CO-melder",
+          "waterlek": "Waterlekkage"
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "connection": { "name": "Verbinding met portaal" },
+      "incident": { "name": "Open incident" }
+    }
+  },
+  "issues": {
+    "integration_disabled": {
+      "title": "Digital Lifeline-app staat uit in het portaal",
+      "description": "Kritieke meldingen worden NIET verstuurd. Zet de Home Assistant-app weer aan in het Digital Lifeline-portaal."
+    }
+  },
+  "services": {
+    "send_test_event": {
+      "name": "Testmelding versturen",
+      "description": "Stuurt een als test gemarkeerde melding door de volledige keten. Er wordt geen incident geopend."
+    }
+  }
+}

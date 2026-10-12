@@ -1,0 +1,59 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Digital Lifeline",
+        "description": "Switch on the Home Assistant app in the Digital Lifeline portal first, then paste the webhook URL and token shown there.",
+        "data": { "url": "Webhook URL", "token": "Token" }
+      },
+      "reauth_confirm": {
+        "title": "Update token",
+        "description": "The portal rejected the token. Paste the current token from the portal.",
+        "data": { "token": "Token" }
+      }
+    },
+    "error": {
+      "invalid_url": "This is not a valid webhook URL (it must contain ?household=...).",
+      "invalid_auth": "The portal rejected the token.",
+      "integration_disabled": "The Home Assistant app is switched off in the portal. Switch it on first.",
+      "cannot_connect": "The portal cannot be reached.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This household is already set up.",
+      "reauth_successful": "Token updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Critical sensors",
+        "description": "Choose which entities trigger an immediate alert. Detected automatically by default.",
+        "data": {
+          "val_detectie": "Fall detection",
+          "noodknop": "Alert / panic button",
+          "rookmelder": "Smoke / CO detector",
+          "waterlek": "Water leak"
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "connection": { "name": "Portal connection" },
+      "incident": { "name": "Open incident" }
+    }
+  },
+  "issues": {
+    "integration_disabled": {
+      "title": "Digital Lifeline app is switched off in the portal",
+      "description": "Critical alerts are NOT being sent. Switch the Home Assistant app on again in the Digital Lifeline portal."
+    }
+  },
+  "services": {
+    "send_test_event": {
+      "name": "Send test event",
+      "description": "Sends a flagged test alert through the full delivery path. No incident is opened."
+    }
+  }
+}

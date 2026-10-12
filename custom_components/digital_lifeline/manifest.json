@@ -1,0 +1,13 @@
+{
+  "domain": "digital_lifeline",
+  "name": "Digital Lifeline",
+  "codeowners": ["@Dreamfox-Media"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/Dreamfox-Media/digital-lifeline-ha",
+  "integration_type": "service",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/Dreamfox-Media/digital-lifeline-ha/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}
