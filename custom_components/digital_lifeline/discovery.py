@@ -18,8 +18,11 @@ from .const import (
 _FALL_RE = re.compile(r"(^|[._\W])(fall|falling|val|valdetect\w*|fall_detect\w*)([._\W]|$)", re.I)
 _BUTTON_RE = re.compile(r"(panic|sos|paniek|noodknop|nood_knop|alarm_button|emergency_button|pendant|hanger)", re.I)
 
-# Only these domains can carry an alarm (same as the options-flow selector).
+# Domains the heuristics look at.
 SUPPORTED_DOMAINS = ("binary_sensor", "event", "button")
+# Domains accepted from portal mappings and the options flow: a `sensor.` can
+# report states such as "detected" or "alarm"; `text.`/`select.` settings cannot.
+MAPPABLE_DOMAINS = (*SUPPORTED_DOMAINS, "sensor")
 
 # device_class -> portal field key (binary_sensor)
 _DEVICE_CLASS_MAP = {
@@ -68,7 +71,7 @@ def discover(
         if (
             key in result
             and isinstance(entity_id, str)
-            and entity_id.split(".", 1)[0] in SUPPORTED_DOMAINS
+            and entity_id.split(".", 1)[0] in MAPPABLE_DOMAINS
             and entity_id not in result[key]
         ):
             result[key].append(entity_id)

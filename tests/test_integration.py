@@ -148,6 +148,7 @@ async def test_discover_ignores_mapped_entities_that_cannot_alarm(hass: HomeAssi
         [
             {"field_key": "val_detectie", "entity_id": "text.val_detectie_fall_detection_settings"},
             {"field_key": "val_detectie", "entity_id": "binary_sensor.radar_fall"},
+            {"field_key": "val_detectie", "entity_id": "sensor.radar_fall_status"},
         ],
     )
-    assert found["val_detectie"] == ["binary_sensor.radar_fall"]
+    assert found["val_detectie"] == ["binary_sensor.radar_fall", "sensor.radar_fall_status"]

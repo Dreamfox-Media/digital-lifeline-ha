@@ -30,7 +30,7 @@ from .const import (
     DOMAIN,
     INTEGRATION_VERSION,
 )
-from .discovery import discover
+from .discovery import MAPPABLE_DOMAINS, discover
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -134,7 +134,7 @@ class DigitalLifelineOptionsFlow(OptionsFlow):
             current = discover(self.hass, self.config_entry.data.get(CONF_MAPPED))
 
         entity_selector = selector.EntitySelector(
-            selector.EntitySelectorConfig(domain=["binary_sensor", "event", "button"], multiple=True)
+            selector.EntitySelectorConfig(domain=list(MAPPABLE_DOMAINS), multiple=True)
         )
         schema = vol.Schema(
             {
