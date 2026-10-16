@@ -112,3 +112,29 @@ async def test_auth_failure_ends_in_setup_error(hass: HomeAssistant):
         await hass.config_entries.async_setup(entry.entry_id)
         await hass.async_block_till_done()
     assert entry.state is ConfigEntryState.SETUP_ERROR
+
+
+async def test_client_retries_temporary_errors_but_rejects_invalid(hass: HomeAssistant, aioclient_mock):
+    from homeassistant.helpers.aiohttp_client import async_get_clientsession
+
+    from custom_components.digital_lifeline.client import LifelineClient, LifelineRequestError
+
+    base = "https://portal.example/api/public/webhooks/ha-integration"
+    client = LifelineClient(async_get_clientsession(hass), base, "hh-1", "tok")
+    for status in (404, 408, 429, 503):
+        aioclient_mock.clear_requests()
+        aioclient_mock.post(f"{base}/event", status=status, json={})
+        try:
+            await client.send_events([{"event_id": "e1"}])
+        except LifelineConnectionError:
+            pass
+        else:
+            raise AssertionError(f"status {status} should be retryable")
+    aioclient_mock.clear_requests()
+    aioclient_mock.post(f"{base}/event", status=400, json={"error": "events required"})
+    try:
+        await client.send_events([])
+    except LifelineRequestError:
+        pass
+    else:
+        raise AssertionError("status 400 should not be retryable")

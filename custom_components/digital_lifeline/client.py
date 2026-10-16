@@ -13,6 +13,10 @@ from .const import REQUEST_TIMEOUT_S
 
 _LOGGER = logging.getLogger(__name__)
 
+# Not found (e.g. during a portal deploy), request timeout and rate limiting are
+# temporary: keep the events queued instead of dropping them as invalid.
+_RETRYABLE_STATUSES = (404, 408, 429)
+
 
 class LifelineError(Exception):
     """Base error."""
@@ -87,7 +91,7 @@ class LifelineClient:
                     if isinstance(body, dict) and body.get("error") == "integration_disabled":
                         raise LifelineDisabledError("integration disabled in portal")
                     raise LifelineAuthError("forbidden")
-                if resp.status >= 500:
+                if resp.status >= 500 or resp.status in _RETRYABLE_STATUSES:
                     raise LifelineConnectionError(f"portal error {resp.status}")
                 if resp.status >= 400:
                     raise LifelineRequestError(f"request rejected ({resp.status})")
