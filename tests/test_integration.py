@@ -138,3 +138,16 @@ async def test_client_retries_temporary_errors_but_rejects_invalid(hass: HomeAss
         pass
     else:
         raise AssertionError("status 400 should not be retryable")
+
+
+async def test_discover_ignores_mapped_entities_that_cannot_alarm(hass: HomeAssistant):
+    from custom_components.digital_lifeline.discovery import discover
+
+    found = discover(
+        hass,
+        [
+            {"field_key": "val_detectie", "entity_id": "text.val_detectie_fall_detection_settings"},
+            {"field_key": "val_detectie", "entity_id": "binary_sensor.radar_fall"},
+        ],
+    )
+    assert found["val_detectie"] == ["binary_sensor.radar_fall"]

@@ -18,6 +18,9 @@ from .const import (
 _FALL_RE = re.compile(r"(^|[._\W])(fall|falling|val|valdetect\w*|fall_detect\w*)([._\W]|$)", re.I)
 _BUTTON_RE = re.compile(r"(panic|sos|paniek|noodknop|nood_knop|alarm_button|emergency_button|pendant|hanger)", re.I)
 
+# Only these domains can carry an alarm (same as the options-flow selector).
+SUPPORTED_DOMAINS = ("binary_sensor", "event", "button")
+
 # device_class -> portal field key (binary_sensor)
 _DEVICE_CLASS_MAP = {
     "smoke": FIELD_SMOKE,
@@ -29,7 +32,7 @@ _DEVICE_CLASS_MAP = {
 def classify(entity_id: str, device_class: str | None, name: str | None) -> str | None:
     """Return the portal field key for an entity, or None if it is not critical."""
     domain = entity_id.split(".", 1)[0]
-    if domain not in ("binary_sensor", "event", "button"):
+    if domain not in SUPPORTED_DOMAINS:
         return None
     if domain == "binary_sensor" and device_class in _DEVICE_CLASS_MAP:
         return _DEVICE_CLASS_MAP[device_class]
@@ -60,7 +63,14 @@ def discover(
     for item in mapped or []:
         key = item.get("field_key")
         entity_id = item.get("entity_id")
-        if key in result and isinstance(entity_id, str) and entity_id not in result[key]:
+        # A portal mapping can point at e.g. a settings `text.` entity; its changes
+        # are not alarms, so only accept domains that can carry one.
+        if (
+            key in result
+            and isinstance(entity_id, str)
+            and entity_id.split(".", 1)[0] in SUPPORTED_DOMAINS
+            and entity_id not in result[key]
+        ):
             result[key].append(entity_id)
 
     return result
