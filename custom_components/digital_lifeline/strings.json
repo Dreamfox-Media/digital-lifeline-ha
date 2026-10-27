@@ -2,8 +2,8 @@
   "config": {
     "step": {
       "user": {
-        "title": "Digital Lifeline",
-        "description": "Switch on the Home Assistant app in the Digital Lifeline portal first, then paste the webhook URL and token shown there.",
+        "title": "Digilifeline",
+        "description": "Switch on the Home Assistant app in the Digilifeline portal first, then paste the webhook URL and token shown there.",
         "data": { "url": "Webhook URL", "token": "Token" }
       },
       "reauth_confirm": {
@@ -46,8 +46,8 @@
   },
   "issues": {
     "integration_disabled": {
-      "title": "Digital Lifeline app is switched off in the portal",
-      "description": "Critical alerts are NOT being sent. Switch the Home Assistant app on again in the Digital Lifeline portal."
+      "title": "Digilifeline app is switched off in the portal",
+      "description": "Critical alerts are NOT being sent. Switch the Home Assistant app on again in the Digilifeline portal."
     }
   },
   "services": {

@@ -2,8 +2,8 @@
   "config": {
     "step": {
       "user": {
-        "title": "Digital Lifeline",
-        "description": "Zet eerst de Home Assistant-app aan in het Digital Lifeline-portaal en plak daarna de webhook-URL en het token die daar staan.",
+        "title": "Digilifeline",
+        "description": "Zet eerst de Home Assistant-app aan in het Digilifeline-portaal en plak daarna de webhook-URL en het token die daar staan.",
         "data": { "url": "Webhook-URL", "token": "Token" }
       },
       "reauth_confirm": {
@@ -46,8 +46,8 @@
   },
   "issues": {
     "integration_disabled": {
-      "title": "Digital Lifeline-app staat uit in het portaal",
-      "description": "Kritieke meldingen worden NIET verstuurd. Zet de Home Assistant-app weer aan in het Digital Lifeline-portaal."
+      "title": "Digilifeline-app staat uit in het portaal",
+      "description": "Kritieke meldingen worden NIET verstuurd. Zet de Home Assistant-app weer aan in het Digilifeline-portaal."
     }
   },
   "services": {

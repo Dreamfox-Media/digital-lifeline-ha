@@ -1,6 +1,6 @@
 {
   "domain": "digital_lifeline",
-  "name": "Digital Lifeline",
+  "name": "Digilifeline",
   "codeowners": ["@Dreamfox-Media"],
   "config_flow": true,
   "dependencies": [],

@@ -28,8 +28,8 @@ class _Base(CoordinatorEntity[LifelineCoordinator], BinarySensorEntity):
         self._attr_translation_key = key
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, entry.entry_id)},
-            name="Digital Lifeline",
-            manufacturer="Digital Lifeline",
+            name="Digilifeline",
+            manufacturer="Digilifeline",
             sw_version=INTEGRATION_VERSION,
         )
 

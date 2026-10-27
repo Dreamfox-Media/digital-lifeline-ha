@@ -1,4 +1,4 @@
-"""Digital Lifeline: push critical Home Assistant sensors to the Lifeline portal."""
+"""Digilifeline: push critical Home Assistant sensors to the Lifeline portal."""
 
 from __future__ import annotations
 
@@ -75,7 +75,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: LifelineConfigEntry) -> 
         async def _send_test(_call: ServiceCall) -> None:
             entries = hass.config_entries.async_loaded_entries(DOMAIN)
             if not entries:
-                raise ServiceValidationError("Digital Lifeline is not set up")
+                raise ServiceValidationError("Digilifeline is not set up")
             for loaded in entries:
                 await loaded.runtime_data.async_send_test()
 
