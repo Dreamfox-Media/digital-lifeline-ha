@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="docs/images/hero.jpg" alt="An older woman reading a book on her sofa at home" width="100%">
+  <img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/hero.jpg" alt="An older woman reading a book on her sofa at home" width="100%">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/logo.png" alt="Digital Lifeline logo: a house with a heartbeat" width="120">
 </p>
 
 <h1 align="center">Digital Lifeline for Home Assistant</h1>
@@ -42,8 +46,8 @@ pushes the alarm itself, the moment it happens.**
 
 <table>
   <tr>
-    <td width="50%"><img src="docs/images/sensors.jpg" alt="Small white home sensors: motion sensor, door sensors and an alert button"></td>
-    <td width="50%"><img src="docs/images/family-app.jpg" alt="A relative looking at the Digital Lifeline app on their phone"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/sensors.jpg" alt="Small white home sensors: motion sensor, door sensors and an alert button"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/family-app.jpg" alt="A relative looking at the Digital Lifeline app on their phone"></td>
   </tr>
   <tr>
     <td align="center"><b>At home:</b> the sensors you already have in Home Assistant</td>
@@ -59,7 +63,7 @@ Learn more about the project, or sign up to test it, at **[ha.digilifeline.com](
 ## How it works
 
 <p align="center">
-  <img src="docs/images/how-it-works.svg" alt="Sensors at home trigger the Digital Lifeline integration in Home Assistant, which pushes the alert to the Lifeline portal, which notifies family and caregivers" width="100%">
+  <img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/how-it-works.svg" alt="Sensors at home trigger the Digital Lifeline integration in Home Assistant, which pushes the alert to the Lifeline portal, which notifies family and caregivers" width="100%">
 </p>
 
 1. A critical sensor in Home Assistant triggers (for example fall detection).
@@ -150,8 +154,8 @@ alarm zelf, op het moment dat het gebeurt.**
 
 <table>
   <tr>
-    <td width="50%"><img src="docs/images/sensors.jpg" alt="Kleine witte sensoren: bewegingsmelder, deursensoren en een noodknop"></td>
-    <td width="50%"><img src="docs/images/family-app.jpg" alt="Een familielid kijkt op de telefoon naar de Digital Lifeline-app"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/sensors.jpg" alt="Kleine witte sensoren: bewegingsmelder, deursensoren en een noodknop"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/family-app.jpg" alt="Een familielid kijkt op de telefoon naar de Digital Lifeline-app"></td>
   </tr>
   <tr>
     <td align="center"><b>Thuis:</b> de sensoren die je al in Home Assistant hebt</td>
@@ -167,7 +171,7 @@ Meer over het project, of aanmelden als tester: **[ha.digilifeline.nl](https://h
 ## Hoe werkt het?
 
 <p align="center">
-  <img src="docs/images/how-it-works.svg" alt="Sensoren thuis activeren de Digital Lifeline-integratie in Home Assistant, die de melding doorstuurt naar het Lifeline-portaal, dat familie en mantelzorgers waarschuwt" width="100%">
+  <img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/how-it-works.svg" alt="Sensoren thuis activeren de Digital Lifeline-integratie in Home Assistant, die de melding doorstuurt naar het Lifeline-portaal, dat familie en mantelzorgers waarschuwt" width="100%">
 </p>
 
 1. Een kritieke sensor in Home Assistant gaat af (bijvoorbeeld valdetectie).
