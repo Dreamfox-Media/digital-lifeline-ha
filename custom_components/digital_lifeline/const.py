@@ -1,4 +1,4 @@
-"""Constants for the Digilifeline integration."""
+"""Constants for the DigiLifeline integration."""
 
 from __future__ import annotations
 

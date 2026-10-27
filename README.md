@@ -3,10 +3,10 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/logo.png" alt="Digilifeline logo: a house with a heartbeat" width="120">
+  <img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/logo.png" alt="DigiLifeline logo: a house with a heartbeat" width="120">
 </p>
 
-<h1 align="center">Digilifeline for Home Assistant</h1>
+<h1 align="center">DigiLifeline for Home Assistant</h1>
 
 <p align="center">
   <b>Let family and caregivers know within seconds when something is wrong at home.</b><br>
@@ -33,10 +33,10 @@
 
 ## What is this for?
 
-**Digilifeline** helps people who live alone, often older relatives, stay independent while the people
+**DigiLifeline** helps people who live alone, often older relatives, stay independent while the people
 who care about them can stay at ease. Sensors in the home (a fall detector, an alert button, a smoke
 detector) are watched by **Home Assistant**. This integration connects Home Assistant to the
-**Digilifeline portal**, so that when one of those sensors triggers, **family and caregivers are
+**DigiLifeline portal**, so that when one of those sensors triggers, **family and caregivers are
 notified immediately**, on their phone, by e-mail and by SMS as a backup.
 
 Without this integration the portal checks your Home Assistant every few minutes. That is fine for
@@ -47,7 +47,7 @@ pushes the alarm itself, the moment it happens.**
 <table>
   <tr>
     <td width="50%"><img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/sensors.jpg" alt="Small white home sensors: motion sensor, door sensors and an alert button"></td>
-    <td width="50%"><img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/family-app.jpg" alt="A relative looking at the Digilifeline app on their phone"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/family-app.jpg" alt="A relative looking at the DigiLifeline app on their phone"></td>
   </tr>
   <tr>
     <td align="center"><b>At home:</b> the sensors you already have in Home Assistant</td>
@@ -63,7 +63,7 @@ Learn more about the project, or sign up to test it, at **[ha.digilifeline.com](
 ## How it works
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/how-it-works.svg" alt="Sensors at home trigger the Digilifeline integration in Home Assistant, which pushes the alert to the Lifeline portal, which notifies family and caregivers" width="100%">
+  <img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/how-it-works.svg" alt="Sensors at home trigger the DigiLifeline integration in Home Assistant, which pushes the alert to the Lifeline portal, which notifies family and caregivers" width="100%">
 </p>
 
 1. A critical sensor in Home Assistant triggers (for example fall detection).
@@ -91,13 +91,13 @@ Sensors that are already mapped in the portal are added automatically.
 
 ## Install (HACS)
 
-You need a Digilifeline account. Not a user yet? See [ha.digilifeline.com](https://ha.digilifeline.com).
+You need a DigiLifeline account. Not a user yet? See [ha.digilifeline.com](https://ha.digilifeline.com).
 
 1. In the portal: **Dashboard → Connection → Lifeline Home Assistant app** → switch it on.
 2. In Home Assistant: **HACS → ⋮ → Custom repositories** → add
    `https://github.com/Dreamfox-Media/digital-lifeline-ha` as category **Integration**.
-3. Install **Digilifeline**, restart Home Assistant.
-4. **Settings → Devices & services → Add integration → Digilifeline**, paste the webhook URL and
+3. Install **DigiLifeline**, restart Home Assistant.
+4. **Settings → Devices & services → Add integration → DigiLifeline**, paste the webhook URL and
    token shown in the portal.
 
 The portal shows a green check as soon as the integration is connected and the heartbeat arrives.
@@ -141,10 +141,10 @@ the integration and Home Assistant version. Nothing else from your installation 
 
 ## Waar is dit voor?
 
-**Digilifeline** helpt mensen die alleen wonen, vaak oudere familieleden, zelfstandig te blijven,
+**DigiLifeline** helpt mensen die alleen wonen, vaak oudere familieleden, zelfstandig te blijven,
 terwijl de mensen om hen heen gerust kunnen zijn. Sensoren in huis (een valdetector, een noodknop, een
 rookmelder) worden bewaakt door **Home Assistant**. Deze integratie verbindt Home Assistant met het
-**Digilifeline-portaal**: gaat zo'n sensor af, dan krijgen **familie en mantelzorgers direct een
+**DigiLifeline-portaal**: gaat zo'n sensor af, dan krijgen **familie en mantelzorgers direct een
 melding**, op hun telefoon, per e-mail en als back-up per sms.
 
 Zonder deze integratie kijkt het portaal om de paar minuten in je Home Assistant. Dat is prima voor de
@@ -155,7 +155,7 @@ alarm zelf, op het moment dat het gebeurt.**
 <table>
   <tr>
     <td width="50%"><img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/sensors.jpg" alt="Kleine witte sensoren: bewegingsmelder, deursensoren en een noodknop"></td>
-    <td width="50%"><img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/family-app.jpg" alt="Een familielid kijkt op de telefoon naar de Digilifeline-app"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/family-app.jpg" alt="Een familielid kijkt op de telefoon naar de DigiLifeline-app"></td>
   </tr>
   <tr>
     <td align="center"><b>Thuis:</b> de sensoren die je al in Home Assistant hebt</td>
@@ -171,7 +171,7 @@ Meer over het project, of aanmelden als tester: **[ha.digilifeline.nl](https://h
 ## Hoe werkt het?
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/how-it-works.svg" alt="Sensoren thuis activeren de Digilifeline-integratie in Home Assistant, die de melding doorstuurt naar het Lifeline-portaal, dat familie en mantelzorgers waarschuwt" width="100%">
+  <img src="https://raw.githubusercontent.com/Dreamfox-Media/digital-lifeline-ha/main/docs/images/how-it-works.svg" alt="Sensoren thuis activeren de DigiLifeline-integratie in Home Assistant, die de melding doorstuurt naar het Lifeline-portaal, dat familie en mantelzorgers waarschuwt" width="100%">
 </p>
 
 1. Een kritieke sensor in Home Assistant gaat af (bijvoorbeeld valdetectie).
@@ -199,13 +199,13 @@ Sensoren die al in het portaal zijn gekoppeld, worden automatisch toegevoegd.
 
 ## Installeren (HACS)
 
-Je hebt een Digilifeline-account nodig. Nog geen gebruiker? Kijk op [ha.digilifeline.nl](https://ha.digilifeline.nl).
+Je hebt een DigiLifeline-account nodig. Nog geen gebruiker? Kijk op [ha.digilifeline.nl](https://ha.digilifeline.nl).
 
 1. In het portaal: **Dashboard → Verbinding → Lifeline Home Assistant-app** → zet de app aan.
 2. In Home Assistant: **HACS → ⋮ → Aangepaste repositories** → voeg
    `https://github.com/Dreamfox-Media/digital-lifeline-ha` toe als categorie **Integratie**.
-3. Installeer **Digilifeline** en herstart Home Assistant.
-4. **Instellingen → Apparaten & services → Integratie toevoegen → Digilifeline**, plak de webhook-URL
+3. Installeer **DigiLifeline** en herstart Home Assistant.
+4. **Instellingen → Apparaten & services → Integratie toevoegen → DigiLifeline**, plak de webhook-URL
    en het token uit het portaal.
 
 Het portaal toont een groen vinkje zodra de integratie verbonden is en het levensteken aankomt. Met de

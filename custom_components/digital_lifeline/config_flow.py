@@ -1,4 +1,4 @@
-"""Config flow for Digilifeline."""
+"""Config flow for DigiLifeline."""
 
 from __future__ import annotations
 
@@ -73,7 +73,7 @@ class DigitalLifelineConfigFlow(ConfigFlow, domain=DOMAIN):
                 await self.async_set_unique_id(household)
                 self._abort_if_unique_id_configured()
                 return self.async_create_entry(
-                    title="Digilifeline",
+                    title="DigiLifeline",
                     data={
                         CONF_URL: user_input[CONF_URL].strip(),
                         CONF_TOKEN: user_input[CONF_TOKEN].strip(),

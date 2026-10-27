@@ -1,3 +1,3 @@
 send_test_event:
   name: Send test event
-  description: Sends a flagged test alert through the full delivery path to the Digilifeline portal. No incident is opened and nobody is notified.
+  description: Sends a flagged test alert through the full delivery path to the DigiLifeline portal. No incident is opened and nobody is notified.

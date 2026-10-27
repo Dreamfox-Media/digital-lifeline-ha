@@ -1,4 +1,4 @@
-"""HTTP client for the Digilifeline portal."""
+"""HTTP client for the DigiLifeline portal."""
 
 from __future__ import annotations
 

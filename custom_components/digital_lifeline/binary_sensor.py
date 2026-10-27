@@ -33,8 +33,8 @@ class _Base(CoordinatorEntity[LifelineCoordinator], BinarySensorEntity):
         self.entity_id = f"binary_sensor.digital_lifeline_{_OBJECT_IDS[key]}"
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, entry.entry_id)},
-            name="Digilifeline",
-            manufacturer="Digilifeline",
+            name="DigiLifeline",
+            manufacturer="DigiLifeline",
             sw_version=INTEGRATION_VERSION,
         )
 
