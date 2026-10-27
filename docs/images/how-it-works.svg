@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-label="Sensors in Home Assistant send alerts through the Digital Lifeline integration to the portal, which notifies family and caregivers">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1d6fa5"/></marker>
+  </defs>
+  <rect width="960" height="300" rx="16" fill="#f4f8fb"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" text-anchor="middle">
+    <g>
+      <rect x="24" y="70" width="190" height="160" rx="14" fill="#fff" stroke="#c9d9e5" stroke-width="2"/>
+      <text x="119" y="104" font-size="18" font-weight="700" fill="#16384f">At home</text>
+      <text x="119" y="136" font-size="14" fill="#3d5a6e">Fall detection</text>
+      <text x="119" y="158" font-size="14" fill="#3d5a6e">Alert button</text>
+      <text x="119" y="180" font-size="14" fill="#3d5a6e">Smoke / CO</text>
+      <text x="119" y="202" font-size="14" fill="#3d5a6e">Water leak</text>
+    </g>
+    <g>
+      <rect x="270" y="70" width="190" height="160" rx="14" fill="#fff" stroke="#c9d9e5" stroke-width="2"/>
+      <text x="365" y="104" font-size="18" font-weight="700" fill="#16384f">Home Assistant</text>
+      <rect x="290" y="122" width="150" height="82" rx="10" fill="#e3f1fa" stroke="#1d6fa5" stroke-width="2"/>
+      <text x="365" y="152" font-size="14" font-weight="700" fill="#1d6fa5">Digital Lifeline</text>
+      <text x="365" y="172" font-size="14" font-weight="700" fill="#1d6fa5">integration</text>
+      <text x="365" y="193" font-size="12" fill="#3d5a6e">queue · heartbeat</text>
+    </g>
+    <g>
+      <rect x="516" y="70" width="190" height="160" rx="14" fill="#fff" stroke="#c9d9e5" stroke-width="2"/>
+      <text x="611" y="104" font-size="18" font-weight="700" fill="#16384f">Lifeline portal</text>
+      <text x="611" y="140" font-size="14" fill="#3d5a6e">Opens an incident</text>
+      <text x="611" y="162" font-size="14" fill="#3d5a6e">Removes duplicates</text>
+      <text x="611" y="184" font-size="14" fill="#3d5a6e">Shows the green check</text>
+      <text x="611" y="206" font-size="14" fill="#3d5a6e">ha.digilifeline.com</text>
+    </g>
+    <g>
+      <rect x="762" y="70" width="174" height="160" rx="14" fill="#fff" stroke="#c9d9e5" stroke-width="2"/>
+      <text x="849" y="104" font-size="18" font-weight="700" fill="#16384f">Family &amp; carers</text>
+      <text x="849" y="140" font-size="14" fill="#3d5a6e">App notification</text>
+      <text x="849" y="162" font-size="14" fill="#3d5a6e">E-mail</text>
+      <text x="849" y="184" font-size="14" fill="#3d5a6e">SMS backup</text>
+    </g>
+    <g stroke="#1d6fa5" stroke-width="3" fill="none" marker-end="url(#a)">
+      <path d="M216 150H266"/>
+      <path d="M462 150H512"/>
+      <path d="M708 150H758"/>
+    </g>
+    <text x="365" y="48" font-size="13" fill="#3d5a6e">instantly, the moment a sensor triggers</text>
+    <text x="611" y="262" font-size="13" fill="#3d5a6e">heartbeat every minute → green check</text>
+  </g>
+</svg>
