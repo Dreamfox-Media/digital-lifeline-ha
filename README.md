@@ -127,6 +127,7 @@ the integration and Home Assistant version. Nothing else from your installation 
 - Project and sign-up: [ha.digilifeline.com](https://ha.digilifeline.com)
 - Portal: [my.digilifeline.com](https://my.digilifeline.com)
 - Questions or problems: [open an issue](https://github.com/Dreamfox-Media/digital-lifeline-ha/issues)
+- Made with ❤️ by [smartrevolutions.nl](https://smartrevolutions.nl)
 
 ---
 
@@ -236,7 +237,8 @@ verlaat je netwerk.
 - Project en aanmelden: [ha.digilifeline.nl](https://ha.digilifeline.nl)
 - Portaal: [mijn.digitallifeline.nl](https://mijn.digitallifeline.nl)
 - Vragen of problemen: [maak een issue aan](https://github.com/Dreamfox-Media/digital-lifeline-ha/issues)
+- Met ❤️ gemaakt door [smartrevolutions.nl](https://smartrevolutions.nl)
 
 ---
 
-<p align="center"><sub>© Dreamfox Media · MIT License</sub></p>
+<p align="center"><sub>Made with ❤️ by <a href="https://smartrevolutions.nl">smartrevolutions.nl</a> · © Dreamfox Media · MIT License</sub></p>
