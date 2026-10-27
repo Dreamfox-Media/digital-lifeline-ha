@@ -19,6 +19,9 @@ async def async_setup_entry(hass: HomeAssistant, entry, async_add_entities: AddE
     async_add_entities([LifelineConnectionSensor(coordinator, entry), LifelineIncidentSensor(coordinator, entry)])
 
 
+_OBJECT_IDS = {"connection": "portal_connection", "incident": "open_incident"}
+
+
 class _Base(CoordinatorEntity[LifelineCoordinator], BinarySensorEntity):
     _attr_has_entity_name = True
 
@@ -26,6 +29,8 @@ class _Base(CoordinatorEntity[LifelineCoordinator], BinarySensorEntity):
         super().__init__(coordinator)
         self._attr_unique_id = f"{entry.entry_id}_{key}"
         self._attr_translation_key = key
+        # Keep entity ids stable (digital_lifeline_*) regardless of the display name.
+        self.entity_id = f"binary_sensor.digital_lifeline_{_OBJECT_IDS[key]}"
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, entry.entry_id)},
             name="Digilifeline",
